@@ -6,7 +6,10 @@
               >https://www.pixiv.net/artworks/91187479</a
             >，侵删。
 <br/>
-页面适配移动端，PC 当然也能用，就是看起来会有点怪。
+页面适配移动端，PC 当然也能用，就是看起来会有点怪。<br/>
+
+### 已挂Github Page:<a href="https://yeeeck.github.io/genshin-damage-cal-plus/">https://yeeeck.github.io/genshin-damage-cal-plus/</a>
+
 
 ## Project setup
 
