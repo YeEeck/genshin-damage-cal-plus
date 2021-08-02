@@ -98,6 +98,22 @@
         </v-card>
       </v-dialog>
       <v-col></v-col>
+      <v-text-field
+        v-model="slevel"
+        label="人物等级"
+        outlined
+        dense
+        clearable
+        suffix="%"
+      ></v-text-field>
+      <v-text-field
+        v-model="mlevel"
+        label="怪物等级"
+        outlined
+        dense
+        clearable
+        suffix="%"
+      ></v-text-field>
       <v-btn
         color="primary"
         elevation="2"
@@ -135,6 +151,8 @@ export default {
       damAdd2: "",
       damAdd3: "",
       defend: "",
+      mlevel: 90,
+      slevel: 90,
       loading1: false,
       snackbar: false,
       text1: "",
@@ -147,12 +165,14 @@ export default {
     btnClick() {
       this.loading1 = true;
       this.snackbar = true;
+      let levelDefend =
+        1 - (this.slevel * 1 + 100) / (this.slevel * 1 + this.mlevel * 1 + 200);
       let res =
         this.atk *
         (this.skill / 100) *
         (1 + this.damAdd1 / 100 + this.damAdd2 / 100 + this.damAdd3 / 100) *
         (1 - this.defend / 100) *
-        0.5;
+        (1 - levelDefend);
       let crh = res * (1 + this.crDam / 100);
       let realdam = res + (crh - res) * (this.crRate / 100);
       this.text1 = "伤害期望: " + realdam;
