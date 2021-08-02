@@ -9,6 +9,8 @@ import vuetify from '@/plugins/vuetify'
 
 Vue.config.productionTip = false
 
+document.title = "原神计算器"
+
 new Vue({
   router,
   store,
