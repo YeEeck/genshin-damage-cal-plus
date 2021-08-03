@@ -98,12 +98,12 @@ export default {
       tab: null,
       dialog1: false,
     };
-  }
+  },
 };
 </script>
 
 <style lang="less">
-body{
+body {
   overflow-y: unset;
 }
 </style>

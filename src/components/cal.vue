@@ -118,6 +118,7 @@
         color="primary"
         elevation="2"
         block
+        large
         :loading="loading1"
         :disabled="loading1"
         @click="btnClick"
