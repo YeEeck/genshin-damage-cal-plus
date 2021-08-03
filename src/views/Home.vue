@@ -46,9 +46,9 @@
         <div
           id="scrolling-techniques-3"
           class="overflow-y-auto"
-          style="height: 100%"
+          style="height: 60000px; -webkit-overflow-scrolling: touch"
         >
-          <v-container style="height: 100%">
+          <v-container style="min-height: 101%">
             <div style="margin-top: 220px">
               <v-tabs-items v-model="tab">
                 <v-tab-item> <cal-com></cal-com></v-tab-item>
@@ -98,9 +98,12 @@ export default {
       tab: null,
       dialog1: false,
     };
-  },
+  }
 };
 </script>
 
 <style lang="less">
+body{
+  overflow-y: unset;
+}
 </style>
