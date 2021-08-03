@@ -8,7 +8,7 @@
           dark
           shrink-on-scroll
           prominent
-          :src="require('../assets/91187479_p0.jpg')"
+          src="https://wx1.sinaimg.cn/mw1024/002sI42tgy1gt436j1stuj60u010mdsy02.jpg"
           fade-img-on-scroll
           scroll-target="#scrolling-techniques-3"
         >

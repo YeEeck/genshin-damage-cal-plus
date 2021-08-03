@@ -86,7 +86,9 @@
           </v-card-title>
 
           <v-card-text>
-            <v-img :src="require('../assets/image001.jpg')"></v-img>
+            <v-img
+              src="https://wx4.sinaimg.cn/mw1024/002sI42tgy1gt436ll99xj60to178akc02.jpg"
+            ></v-img>
           </v-card-text>
 
           <v-divider></v-divider>
