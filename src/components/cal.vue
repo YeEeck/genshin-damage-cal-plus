@@ -167,13 +167,14 @@ export default {
       this.loading1 = true;
       this.snackbar = true;
       let levelDefend =
-        1 - (this.slevel * 1 + 100) / (this.slevel * 1 + this.mlevel * 1 + 200);
+        (this.slevel * 5 + 500) /
+        (this.slevel * 5 + 500 + (this.mlevel * 5 + 500));
       let res =
         this.atk *
         (this.skill / 100) *
         (1 + this.damAdd1 / 100 + this.damAdd2 / 100 + this.damAdd3 / 100) *
         (1 - this.defend / 100) *
-        (1 - levelDefend);
+        levelDefend;
       let crh = res * (1 + this.crDam / 100);
       let realdam = res + (crh - res) * (this.crRate / 100);
       this.text1 = "伤害期望: " + realdam;
