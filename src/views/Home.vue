@@ -10,7 +10,7 @@
           prominent
           :src="require('../assets/91187479_p0.jpg')"
           fade-img-on-scroll
-          scroll-target="#scrolling-techniques-3"
+          scroll-target="#scrolling-techniques"
         >
           <template v-slot:img="{ props }">
             <v-img
@@ -43,18 +43,12 @@
             </v-tabs>
           </template>
         </v-app-bar>
-        <div
-          id="scrolling-techniques-3"
-          class="overflow-y-auto"
-          style="height: 60000px; -webkit-overflow-scrolling: touch"
-        >
-          <v-container style="min-height: 101%">
-            <div style="margin-top: 220px">
-              <v-tabs-items v-model="tab">
-                <v-tab-item> <cal-com></cal-com></v-tab-item>
-                <v-tab-item> <figure-com></figure-com></v-tab-item>
-              </v-tabs-items>
-            </div>
+        <div class="scroll-warp" id="scrolling-techniques" ref="warp1">
+          <v-container class="scroll-box-inner">
+            <v-tabs-items v-model="tab">
+              <v-tab-item> <cal-com></cal-com></v-tab-item>
+              <v-tab-item> <figure-com></figure-com></v-tab-item>
+            </v-tabs-items>
           </v-container>
         </div>
       </v-card>
@@ -99,11 +93,15 @@ export default {
       dialog1: false,
     };
   },
+  mounted() {
+    this.$refs.warp1.style.height = window.innerHeight - 1 + "px";
+  },
 };
 </script>
 
 <style lang="less">
-body {
-  overflow-y: unset;
+.scroll-warp {
+  overflow-y: auto !important;
+  padding-top: 210px;
 }
 </style>
